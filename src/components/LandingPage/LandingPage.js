@@ -1,23 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import './LandingPage.css';  // Import the custom CSS file
 
 const LandingPage = () => {
+
+    // Function to handle scroll for "About" and "Contact"
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });  // Smooth scroll to section
+        }
+    };
+
     return (
         <div>
             {/* Header with custom gradient background and white text */}
             <header className="p-3 text-center" style={{ background: 'linear-gradient(135deg, #4e54c8, #8f94fb)' }}>
                 <h1 className="display-4 font-weight-bold mb-3 text-white">Welcome to My E-Learning Platform and Portfolio</h1>
-                <p className="lead mb-3 text-white">I hope this site provides you inspiration and an oppurtunity to learn!</p>
+                <p className="lead mb-3 text-white">I hope this site provides you inspiration and an opportunity to learn!</p>
                 <nav>
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            <a className="nav-link" href="/courses">Courses</a>
+                            <Link className="nav-link" to="/courses">Courses</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#about">About</a>
+                            <Link className="nav-link" to="/portfolio">Portfolio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#contact">Contact</a>
+                            {/* Prevent the default anchor behavior and scroll to About section */}
+                            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
+                        </li>
+                        <li className="nav-item">
+                            {/* Prevent the default anchor behavior and scroll to Contact section */}
+                            <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
                         </li>
                     </ul>
                 </nav>
@@ -27,7 +42,7 @@ const LandingPage = () => {
             <main className="container my-5">
                 <section id="wip" className="mb-5 p-4 border rounded-lg shadow-lg bg-white">
                     <h2 className="h3 font-weight-bold mb-3">Important Read! Construction Zone ahead :)</h2>
-                    <p>This is a work in progress. More will be added very very soon. For now click the 'courses' link above to see what the future holds! </p>
+                    <p>This is a work in progress. More will be added very very soon. For now, click the 'courses' link above to see what the future holds!</p>
                 </section>
 
                 <section id="about" className="mb-5 p-4 border rounded-lg shadow-lg bg-white">
