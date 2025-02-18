@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './CoursesPage.css';
-import mathImage from '../assets/math.png';
-import statsImage from '../assets/curve.png';
-import programmingImage from '../assets/programming.png';
-import mcuImage from '../assets/microcontroller.png';
-import deepLearningImage from '../assets/deep-learning.png';
+import mathImage from '../../assets/math.png';
+import statsImage from '../../assets/curve.png';
+import programmingImage from '../../assets/programming.png';
+import mcuImage from '../../assets/microcontroller.png';
+import deepLearningImage from '../../assets/deep-learning.png';
 
 const CoursesPage = () => {
   const categories = [
@@ -35,7 +35,7 @@ const CoursesPage = () => {
               <div className="card-body">
                 <h5 className="card-title">{category.name}</h5>
                 <p className="card-text">{category.description}</p>
-                <Link to={`/${category.name.toLowerCase().replace(/\s+/g, '-')}`} className="btn btn-primary">Start Learning</Link>
+                <Link to='#/' className="btn btn-primary">Start Learning</Link>
               </div>
             </div>
           </div>
