@@ -9,7 +9,7 @@ import deepLearningImage from '../../assets/deep-learning.png';
 
 const CoursesPage = () => {
   const categories = [
-    { name: 'Mathematics', description: 'Learn advanced mathematics concepts, from calculus to algebra.', image: mathImage },
+    { name: 'Mathematics', description: 'Learn advanced mathematics concepts; Calculus and Linear Algebra.', image: mathImage },
     { name: 'Statistics', description: 'Dive into data analysis, probability theory, and more.', image: statsImage },
     { name: 'Programming Languages', description: 'Choose from a wide variety of programming languages to master.', image: programmingImage },
     { name: 'Embedded Systems', description: 'Learn how to build embedded systems for real-world applications.', image: mcuImage },
