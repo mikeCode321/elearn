@@ -35,7 +35,7 @@ const CoursesPage = () => {
               <div className="card-body">
                 <h5 className="card-title">{category.name}</h5>
                 <p className="card-text">{category.description}</p>
-                <Link to='#/' className="btn btn-primary">Start Learning</Link>
+                <a href="https://mikecode321.github.io/deeplearning_zero_hero/" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Start Learning</a>
               </div>
             </div>
           </div>
