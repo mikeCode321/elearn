@@ -8,24 +8,85 @@ body, html {
   margin: 0; /* Removes default margin to prevent extra spacing */
 }
 
-main {
-  min-height: 80vh; /* Ensures the main content takes up at least 80% of the viewport height */
+.main-header {
+  background: linear-gradient(135deg, #010101, #4e54c8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px
 }
 
-footer {
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo{
+  font-size: 3.5vw;
+}
+
+.hp-motivation-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-motivation-message{
+  font-size: 2vw;
+  color: white;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.main-content {
+  min-height: 100vh; /* Ensures the main content takes up at least 80% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #010101, #4e54c8);
+}
+
+.dive-in-container {
+  height: 80vh;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(125deg, #060722, #474fee);
+  border-radius: 35px;
+  color: white;
+  border: 1px solid white;
+}
+
+.dive-in-container div{
+  padding: 0px 20px;
+}
+
+.dive-in{
+  background-color: white;
+  padding: 10px 30px !important;
+  border-radius: 10px;
+  font-size: 2vw;
+  color: #373eba;
+  font-weight: bold;
+}
+
+.main-footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  background: linear-gradient(135deg, #010101, #4e54c8);
+  color: white;
+  padding: 20px;
 }
 
-
-/* Custom hover effect for nav links */
-.nav-link {
-    text-decoration: none;
-    color: white !important;  /* Default color */
-    transition: all 0.3s ease;  /* Smooth transition */
-}
-
-.nav-link:hover {
-    color: #88ccf1 !important;  /* Hover color */
+.main-footer p{
+  color: white;
+  margin-top: unset;
+  margin-bottom: unset;
+  text-align: center;
+  font-size: 1.25vw;
 }
